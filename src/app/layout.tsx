@@ -14,6 +14,7 @@ const raleway = Raleway({
 export const metadata: Metadata = {
   title: "Little Learners",
   description: "Education for the future",
+  icons: "./fav-logo.png",
 };
 
 export default function RootLayout({
