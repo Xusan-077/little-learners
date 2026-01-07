@@ -14,9 +14,9 @@ export default function ContactInformation() {
             title="Student Information"
             type="Contact Form"
           />
-          <div className="relative border-2 border-[#262A37] rounded-lg p-[120px_100px] bg-white shadow-[8px_8px_0_1px_#1E1E1E]">
+          <div className="relative max-[1280px]:p-[100px_80px] max-[768px]:p-[50px_30px_30px_30px] border-2 border-[#262A37] rounded-lg p-[120px_100px] bg-white shadow-[8px_8px_0_1px_#1E1E1E]">
             <form onSubmit={(e) => e.preventDefault()} className="">
-              <div className="grid grid-cols-2 gap-12.5 mb-12.5">
+              <div className="grid grid-cols-2 gap-12.5 mb-12.5  max-[750px]:grid-cols-1  max-[750px]:gap-y-7.5">
                 <label className="flex flex-col">
                   <span className="text-[22px] font-semibold mb-5 text-[#4C4C4C]">
                     Parent Name
@@ -97,13 +97,13 @@ export default function ContactInformation() {
               </button>
             </form>
             <div className="absolute -top-7 left-[50%] translate-x-[-50%] flex items-center gap-3">
-              <button className="bg-[#FFDECC] cursor-pointer w-37.5 h-14 border-2 border-[#262626] rounded-lf flex items-center justify-center rounded-lg">
+              <button className="bg-[#FFDECC] cursor-pointer max-[640px]:w-18 max-[640px]:h-14 w-37.5 h-14 border-2 border-[#262626] rounded-lf flex items-center justify-center rounded-lg">
                 <Image src={icons.facebook} alt="facebook icon" />
               </button>
-              <button className="bg-[#FFDECC] cursor-pointer w-37.5 h-14 border-2 border-[#262626] rounded-lf flex items-center justify-center rounded-lg">
+              <button className="bg-[#FFDECC] cursor-pointer max-[640px]:w-18 max-[640px]:h-14 w-37.5 h-14 border-2 border-[#262626] rounded-lf flex items-center justify-center rounded-lg">
                 <Image src={icons.twitter} alt="twitter icon" />
               </button>
-              <button className="bg-[#FFDECC] cursor-pointer w-37.5 h-14 border-2 border-[#262626] rounded-lf flex items-center justify-center rounded-lg">
+              <button className="bg-[#FFDECC] cursor-pointer max-[640px]:w-18 max-[640px]:h-14 w-37.5 h-14 border-2 border-[#262626] rounded-lf flex items-center justify-center rounded-lg">
                 <Image src={icons.linkedin} alt="linkedin icon" />
               </button>
             </div>

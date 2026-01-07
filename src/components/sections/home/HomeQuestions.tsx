@@ -18,7 +18,7 @@ export default function HomeQuestions() {
             title="Frequently Asked Questions"
             type="Solutions For The Doubts"
           />
-          <div className="grid grid-cols-2 gap-x-12.5 items-start">
+          <div className="grid grid-cols-2 gap-x-12.5 items-start max-[1024px]:grid-cols-1 gap-7.5">
             <div className="flex flex-col gap-y-7.5">
               {FAQData.slice(0, 4).map((el) => (
                 <div
@@ -28,7 +28,7 @@ export default function HomeQuestions() {
                   } p-[37px_40px] transition-all duration-300 overflow-hidden border-2 border-[#262626] rounded-lg`}
                 >
                   <div className="flex items-center justify-between">
-                    <h3 className="text-[22px] text-[#262626] font-semibold">
+                    <h3 className="max-[640px]:text-[18px] text-[22px] text-[#262626] font-semibold">
                       {el.question}
                     </h3>
                     <button
@@ -37,9 +37,13 @@ export default function HomeQuestions() {
                           ? setOpenIndex(null)
                           : setOpenIndex(el.id)
                       }
-                      className="bg-[#FFF5F0] w-10  cursor-pointer h-10 border-2 border-[#262626] rounded-lg flex justify-center items-center"
+                      className="bg-[#FFF5F0] w-10 p-1.5 cursor-pointer h-10 border-2 border-[#262626] rounded-lg flex justify-center items-center"
                     >
-                      <Image src={icons.plus} alt="plus icon" className="" />
+                      <Image
+                        src={icons.plus}
+                        alt="plus icon"
+                        className="min-w-5 min-h-5"
+                      />
                     </button>
                   </div>
                   {openIndex === el.id && (
@@ -60,8 +64,8 @@ export default function HomeQuestions() {
                     openIndex == el.id ? "bg-white" : "bg-[#FFEFE5]"
                   } p-[37px_40px] transition-all duration-300 overflow-hidden border-2 border-[#262626] rounded-lg`}
                 >
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-[22px] text-[#262626] font-semibold">
+                  <div className="flex items-center gap-5 justify-between">
+                    <h3 className="max-[640px]:text-[18px] max-w-63 text-[22px] text-[#262626] font-semibold">
                       {el.question}
                     </h3>
                     <button
@@ -70,14 +74,18 @@ export default function HomeQuestions() {
                           ? setOpenIndex(null)
                           : setOpenIndex(el.id)
                       }
-                      className="bg-[#FFF5F0] w-10  cursor-pointer h-10 border-2 border-[#262626] rounded-lg flex justify-center items-center"
+                      className="bg-[#FFF5F0] w-10 p-1.5 cursor-pointer h-10 border-2 border-[#262626] rounded-lg flex justify-center items-center"
                     >
-                      <Image src={icons.plus} alt="plus icon" className="" />
+                      <Image
+                        src={icons.plus}
+                        alt="plus icon"
+                        className="min-w-5 min-h-5 "
+                      />
                     </button>
                   </div>
                   {openIndex === el.id && (
                     <div className="pb-6 pt-2 mt-4 border-t-2 border-[#262626]">
-                      <p className="text-[#4C4C4C] leading-relaxed">
+                      <p className="max-[640px]:text-[16px] text-[#4C4C4C] leading-relaxed">
                         {el.answer}
                       </p>
                     </div>

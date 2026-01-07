@@ -30,7 +30,7 @@ export default function Provider({
   return (
     <>
       <Header />
-      <main className="pt-40">{children}</main>
+      <main className="pt-40 max-[640px]:pt-25">{children}</main>
       <Footer />
 
       <div

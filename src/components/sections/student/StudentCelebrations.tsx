@@ -13,7 +13,7 @@ export default function StudentCelebrations() {
             title="Events & Celebrations"
             type="Our Features"
           />
-          <div className="grid grid-cols-3 gap-12.5">
+          <div className="grid grid-cols-3 gap-12.5 max-[1200px]:grid-cols-2 max-[640px]:grid-cols-1">
             {EventsData.map((el) => (
               <StudentCard {...el} key={el.id} />
             ))}

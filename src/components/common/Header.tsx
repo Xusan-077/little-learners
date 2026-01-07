@@ -77,10 +77,60 @@ export default function Header() {
               );
             })}
           </nav>
-          <button className="cursor-pointer hidden max-[1150px]:flex max-[1150px]:items-center bg-[#FFEFE5] h-full p-[0_30px] border-l-2 border-l-[#262626]">
+          <button
+            onClick={() =>
+              burgerShown ? setBurgerShown(false) : setBurgerShown(true)
+            }
+            className="cursor-pointer hidden max-[1150px]:flex max-[1150px]:items-center bg-[#FFEFE5] h-full p-[0_30px] border-l-2 border-l-[#262626]"
+          >
             <Image src={icons.burger} alt="burger icon" className="w-7 h-7" />
           </button>
         </div>
+
+        {burgerShown && (
+          <div
+            onClick={() =>
+              setTimeout(() => {
+                setBurgerShown(false);
+              }, 200)
+            }
+            className="max-[1150px]:block hidden w-screen h-screen top-0 left-0 fixed bg-black/30 z-30"
+          >
+            <div
+              className={`${
+                burgerShown
+                  ? "right-0 opacity-100 visible"
+                  : "-right-full opacity-0 invisible"
+              } top-0 fixed w-[300px] max-[640px]:w-[200px] bg-white h-screen transition-all duration-500 ease-in-out shadow-2xl border-t`}
+            >
+              <nav className="">
+                {NavLinks.map((el, index) => {
+                  const isActive = pathname === el.path;
+                  const isLast = index === NavLinks.length - 1;
+
+                  return (
+                    <Link
+                      key={el.label}
+                      href={el.path}
+                      className={`  
+          flex items-center h-full text-lg font-medium p-[20px_40px] w-full transition-colors
+          ${
+            isLast
+              ? "bg-[#FF8D4D] text-white hover:bg-[#e67e45]"
+              : isActive
+              ? "bg-[#FFEFE5]  text-[#262626]"
+              : "bg-white text-[#262626] hover:bg-[#FFF5F0]"
+          }
+        `}
+                    >
+                      {el.label}
+                    </Link>
+                  );
+                })}
+              </nav>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );

@@ -12,7 +12,7 @@ export default function StudentActivities() {
             title="Extracurricular Activities"
             type="Our Features"
           />
-          <div className="grid grid-cols-3 gap-x-10 gap-y-20">
+          <div className="grid grid-cols-3 gap-x-10 gap-y-21.25 max-[1200px]:grid-cols-2 max-[786px]:grid-cols-1 max-[786px]:gap-15">
             {ActivitiesData.map((el) => (
               <ActionCard key={el.id} {...el} />
             ))}

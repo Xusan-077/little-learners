@@ -17,15 +17,17 @@ export default function Welcome({
   return (
     <section>
       <div className="welcome max-w-455 mx-auto px-5">
-        <div className="flex items-center justify-between border-2 bg-white border-[#262626] rounded-lg p-[150px_120px] mb-50 max-[640px]:mb-20">
-          <div className="">
+        <div className="flex items-center max-[640px]:gap-5 max-[640px]:p-[50px_30px] max-[1024px]:flex-col max-[1024px]:items-center max-[1280px]:p-[100px_80px] gap-12.5 justify-between border-2 bg-white border-[#262626] rounded-lg p-[150px_120px] mb-50 max-[640px]:mb-20">
+          <div className="max-[1024px]:flex-col max-[1024px]:flex max-[1024px]:items-center">
             <span className="bg-white inline-block p-[10px_20px] mb-5 font-medium text-[18px] border-2 border-[#262626] rounded-lg">
               {subtitle}
             </span>
-            <h2 className="text-[48px] font-bold max-w-190">{title}</h2>
+            <h2 className="max-[640px]:text-[28px] max-[1024px]:text-center text-[48px] font-bold max-w-190 max-[1280px]:text-[38px]">
+              {title}
+            </h2>
           </div>
           <div className="">
-            <p className="text-[20px] max-w-195 font-medium text-[#333333]">
+            <p className="max-[640px]:text-[16px] max-[1024px]:text-center text-[20px] max-[1280px]:text-[16px] max-w-195 font-medium text-[#333333]">
               {describtion}
             </p>
             {inContact && (

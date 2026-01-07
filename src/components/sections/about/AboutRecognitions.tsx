@@ -12,7 +12,7 @@ export default function AboutRecognitions() {
             title="Our Awards and Recognitions"
             type="Our Achievements"
           />
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid grid-cols-3 gap-10 max-[1280px]:gap-7.5 max-[1200px]:grid-cols-2 max-[1200px]:gap-y-15  max-[768px]:grid-cols-1">
             {Recognitions.map((el) => (
               <ActionCard key={el.id} {...el} />
             ))}

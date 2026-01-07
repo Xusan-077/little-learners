@@ -11,7 +11,7 @@ html {
 .container {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 16px;
 }
 
 .welcome {
@@ -40,4 +40,31 @@ html {
     height: 87px;
     top: 40px;
     left: 40px;
+}
+
+@media (max-width: 1280px) {
+    .welcome::before {
+        width: 137px;
+        background-size: cover;
+        height: 137px;
+    }
+}
+
+@media (max-width: 640px) {
+    .welcome::before {
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+    }
+
+    .history-card::before {
+        position: absolute;
+        content: "";
+        background-image: url("../assets/images/history-image.png");
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+        top: 26px;
+        left: 30px;
+    }
 }

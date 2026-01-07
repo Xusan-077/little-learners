@@ -13,11 +13,11 @@ export default function AboutMembers() {
             title="Our Team Members"
             type="Our Teachers With Experties"
           />
-          <div className="grid grid-cols-2 gap-12.5">
+          <div className="grid grid-cols-2 gap-12.5 max-[1200px]:grid-cols-1">
             {MembersData.map((el) => (
               <div
                 key={el.id}
-                className="border-2 border-[#262626] shadow-[6px_6px_0_2px_#1E1E1E] rounded-lg p-12.5 bg-white"
+                className="border-2 border-[#262626]  max-[640px]:p-7.5 shadow-[6px_6px_0_2px_#1E1E1E] rounded-lg p-12.5 bg-white"
               >
                 <div className="mb-7.5 flex items-center justify-between">
                   <div className="flex items-center gap-4">
@@ -26,19 +26,19 @@ export default function AboutMembers() {
                       alt={el.title}
                       className="w-25 h-25"
                     />
-                    <h3 className="text-[30px] text-[#333333] font-extrabold">
+                    <h3 className="max-[640]:text-[20px] text-[30px] text-[#333333] font-extrabold">
                       {el.userName}
                     </h3>
                   </div>
-                  <button className="border-2 border-[#262626] w-14 h-14 flex rounded-lg cursor-pointer items-center justify-center bg-[#FFDECC]">
+                  <button className="border-2 max-[640px]:w-12 max-[640px]:h-12 border-[#262626] w-14 h-14 flex rounded-lg cursor-pointer items-center justify-center bg-[#FFDECC]">
                     <Image src={icons.mail} alt="mail icon" />
                   </button>
                 </div>
-                <div className="border-2 border-[#262626] rounded-lg bg-[#FFF5F0] p-7.5">
-                  <h3 className="text-[24px] font-semibold text-[#333333] mb-5">
+                <div className="max-[640px]:p-5 border-2 border-[#262626] rounded-lg bg-[#FFF5F0] p-7.5">
+                  <h3 className="max-[640px]:text-[18px] text-[24px] font-semibold text-[#333333] mb-5">
                     {el.title}
                   </h3>
-                  <p className="text-[20px] font-medium text-[#333333]">
+                  <p className="max-[640]:text-[16px] text-[20px] font-medium text-[#333333]">
                     {el.description}
                   </p>
                 </div>

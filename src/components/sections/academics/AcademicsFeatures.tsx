@@ -12,7 +12,7 @@ export default function AcademicsFeatures() {
             title="Our Special Features"
             type="Our Features"
           />
-          <div className="grid grid-cols-3 gap-x-10 gap-y-20">
+          <div className="grid grid-cols-3 gap-x-10 gap-y-20 max-[1200px]:grid-cols-2 max-[640px]:gap-y-15 max-[800px]:grid-cols-1">
             {SpecialFeatures.map((el) => (
               <ActionCard key={el.id} {...el} />
             ))}
