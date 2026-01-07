@@ -8,8 +8,36 @@ html {
     scroll-behavior: smooth;
 }
 
-.container {    
+.container {
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.welcome {
+    position: relative;
+}
+
+.welcome::before {
+    position: absolute;
+    content: "";
+    background-image: url("../assets/images/hero-image.png");
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 21px;
+}
+
+.history-card {
+    position: relative;
+}
+
+.history-card::before {
+    position: absolute;
+    content: "";
+    background-image: url("../assets/images/history-image.png");
+    width: 87px;
+    height: 87px;
+    top: 40px;
+    left: 40px;
 }
